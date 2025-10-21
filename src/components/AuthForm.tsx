@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { SupabaseClient } from '@supabase/supabase-js';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type AuthMode = 'sign-in' | 'sign-up';
 
@@ -54,6 +55,7 @@ export const AuthForm = ({ supabase }: AuthFormProps) => {
           email: formState.email,
           password: formState.password,
           options: {
+            emailRedirectTo: getSiteUrl(),
             data: {
               full_name: formState.fullName.trim()
             }
