@@ -108,7 +108,7 @@ export const AuthForm = ({ supabase }: AuthFormProps) => {
         </label>
 
         <label className="flex flex-col gap-1 text-sm font-medium text-slate-700">
-          Password
+          Password (Do Not Use Your Klauer Account Password!)
           <input
             type="password"
             autoComplete={mode === 'sign-in' ? 'current-password' : 'new-password'}
